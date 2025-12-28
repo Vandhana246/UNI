@@ -1,0 +1,218 @@
+/* ===================== */
+/* SIDEBAR BASE */
+/* ===================== */
+
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+  
+    background: rgba(15, 10, 35, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    color: #e5e7eb;
+  
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+  }
+  
+  /* ===================== */
+  /* PROFILE SNAPSHOT */
+  /* ===================== */
+  
+  .sidebar-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  
+  .sidebar-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+  
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+    color: #fff;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  .sidebar-userinfo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-username {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .sidebar-email {
+    font-size: 11px;
+    opacity: 0.6;
+  }
+  
+  /* ===================== */
+  /* NAV LINKS */
+  /* ===================== */
+  
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+    padding: 10px 12px;
+    border-radius: 12px;
+  
+    text-decoration: none;
+    color: #e5e7eb;
+  
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  
+  .sidebar-nav a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(3px);
+  }
+  
+  .sidebar-nav a.active {
+    background: linear-gradient(
+      135deg,
+      rgba(124, 58, 237, 0.45),
+      rgba(67, 56, 202, 0.45)
+    );
+  }
+  
+  /* ICON */
+  .sidebar-icon {
+    font-size: 17px;
+  }
+  
+  /* ===================== */
+  /* FOOTER */
+  /* ===================== */
+  
+  .sidebar-footer {
+    margin-top: auto;
+  }
+  
+  .sidebar-logout {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+    padding: 10px 12px;
+    border-radius: 12px;
+  
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    color: #fecaca;
+  
+    cursor: pointer;
+    font-size: 13px;
+  
+    transition: background 0.2s ease;
+  }
+  
+  .sidebar-logout:hover {
+    background: rgba(239, 68, 68, 0.25);
+  }
+/* ===================== */
+/* AVATAR IMAGE SUPPORT */
+/* ===================== */
+
+.sidebar-avatar-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+  
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  }
+  /* CLICKABLE PROFILE */
+.sidebar-profile.clickable {
+    cursor: pointer;
+  }
+  
+  .sidebar-profile.clickable:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 6px;
+  }
+  
+  /* ===================== */
+/* INLINE PROFILE CARD */
+/* ===================== */
+
+.sidebar-profile-card {
+    margin: 12px 0 18px;
+    padding: 14px;
+  
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+  
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #e5e7eb;
+  
+    animation: slideDown 0.25s ease;
+  }
+  
+  .sidebar-bio {
+    font-size: 13px;
+    opacity: 0.85;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-profile-link {
+    display: inline-block;
+    font-size: 12px;
+    color: #c7d2fe;
+    text-decoration: none;
+  }
+  
+  .sidebar-profile-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* animation */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ===================== */
+  /* MOBILE */
+  /* ===================== */
+  
+  @media (max-width: 900px) {
+    .sidebar {
+      display: none;
+    }
+  }
+  
